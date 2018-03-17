@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Data Collector App</title>
+	<link href="../static/main.css" rel="stylesheet">
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<div class="container">
+		<h1>Collecting Height</h1>
+		<h3>Please fill the entries to get the population statistics on heights</h3>
+		<div class="message">
+			{{text | safe}}
+		</div>
+		<!-- Jinja placeholder -->
+		<form action="{{url_for('success')}}" method="POST">
+			<input title="Your email will be safe with us" placeholder="Enter Your Email Address" type="email" name="email_name" required><br>
+			<input title="Your data will be safe with us" placeholder="Enter Your Height in CM" type="number" min="50" max="300" name="height_name" required><br>
+			<button type="submit">Submit</button>
+		</form>
+	</div>
+</body>
+</html>
